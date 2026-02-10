@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.8)  10 FEB 2026 19:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.8)  10 FEB 2026 19:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2045,13 +2045,13 @@ LaTeX Font Info:    Trying to load font information for U+lasy on input line 4.
 (C:\Users\selli\AppData\Local\Programs\MiKTeX\tex/latex/base\ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-<../images/logos/en-tete_EPISEN-SI.png, id=177, 565.51276pt x 139.11975pt>
+<../images/logos/en-tete_EPISEN-SI.png, id=161, 565.51276pt x 139.11975pt>
 File: ../images/logos/en-tete_EPISEN-SI.png Graphic file (type png)
 <use ../images/logos/en-tete_EPISEN-SI.png>
 Package pdftex.def Info: ../images/logos/en-tete_EPISEN-SI.png  used on input l
 ine 24.
 (pdftex.def)             Requested size: 346.97284pt x 85.35826pt.
-<../images/logos/entrepriseLogo.png, id=179, 441.65pt x 434.62375pt>
+<../images/logos/entrepriseLogo.png, id=163, 441.65pt x 434.62375pt>
 File: ../images/logos/entrepriseLogo.png Graphic file (type png)
 <use ../images/logos/entrepriseLogo.png>
 Package pdftex.def Info: ../images/logos/entrepriseLogo.png  used on input line
@@ -2115,13 +2115,16 @@ LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/n' will be
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
 (Font)              scaled to size 10.95pt on input line 5.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 6.
+(Font)              scaled to size 10.0pt on input line 16.
+
+Underfull \vbox (badness 1540) has occurred while \output is active []
+
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.29 ...ine {chapter}{Conclusion}{21}{chapter*.23}
+l.28 ...e {subsection}{Remarques}{22}{section*.22}
                                                   % [1
 
 
@@ -2145,33 +2148,10 @@ l.39 \clearpage
 
 
 ] (Chapters/intro.tex
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 3.
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 10.0pt on input line 3.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 3.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 3.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 3.
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sc' will be
-(Font)              scaled to size 10.0pt on input line 3.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [1
-
-
-
-{C:/Users/selli/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/libertine/lbtn_7g
-rukw.enc}]
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 27.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/sc' will be
-(Font)              scaled to size 10.95pt on input line 42.
+(Font)              scaled to size 10.95pt on input line 24.
 LaTeX Font Info:    Trying to load font information for TS1+LinuxLibertineT-TLF
- on input line 49.
+ on input line 31.
 
 (C:\Users\selli\AppData\Local\Programs\MiKTeX\tex/latex/libertine\ts1linuxliber
 tinet-tlf.fd
@@ -2179,64 +2159,81 @@ File: TS1LinuxLibertineT-TLF.fd 2017/03/20 (autoinst) Font definitions for TS1/
 LinuxLibertineT-TLF.
 )
 LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.95pt on input line 49.
+(Font)              scaled to size 10.95pt on input line 31.
 
 
-LaTeX Warning: Citation 'ref1' on page 2 undefined on input line 49.
+LaTeX Warning: Citation 'ref1' on page 1 undefined on input line 31.
 
 
-LaTeX Warning: Citation 'ref2' on page 2 undefined on input line 50.
+LaTeX Warning: Citation 'ref2' on page 1 undefined on input line 32.
 
 
-LaTeX Warning: Citation 'ref1' on page 2 undefined on input line 50.
+LaTeX Warning: Citation 'ref1' on page 1 undefined on input line 32.
 
 
-LaTeX Warning: Citation 'ref3' on page 2 undefined on input line 51.
+LaTeX Warning: Citation 'ref3' on page 1 undefined on input line 33.
 
 
-LaTeX Warning: Citation 'ref4' on page 2 undefined on input line 52.
+LaTeX Warning: Citation 'ref4' on page 1 undefined on input line 34.
 
 
-LaTeX Warning: Citation 'ref5' on page 2 undefined on input line 53.
+LaTeX Warning: Citation 'ref5' on page 1 undefined on input line 35.
 
-[2{C:/Users/selli/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/libertine/lbtn_
-tlukpt.enc}{C:/Users/selli/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/libert
-ine/lbtn_naooyc.enc}]
-
-LaTeX Warning: Citation 'ref4' on page 3 undefined on input line 54.
+[1
 
 
-LaTeX Warning: Citation 'ref1' on page 3 undefined on input line 54.
+
+{C:/Users/selli/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/libertine/lbtn_tl
+ukpt.enc}{C:/Users/selli/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/libertin
+e/lbtn_naooyc.enc}]
+
+LaTeX Warning: Citation 'ref4' on page 2 undefined on input line 36.
 
 
-LaTeX Warning: Citation 'ref5' on page 3 undefined on input line 54.
+LaTeX Warning: Citation 'ref1' on page 2 undefined on input line 36.
 
 
-LaTeX Warning: Citation 'ref2' on page 3 undefined on input line 54.
+LaTeX Warning: Citation 'ref5' on page 2 undefined on input line 36.
 
 
-LaTeX Warning: Citation 'ref3' on page 3 undefined on input line 54.
+LaTeX Warning: Citation 'ref2' on page 2 undefined on input line 36.
+
+
+LaTeX Warning: Citation 'ref3' on page 2 undefined on input line 36.
 
 (../ShareText/tab1.tex)
-<../images/Mapreduce.png, id=356, 1400.23125pt x 477.785pt>
+<../images/Mapreduce.png, id=322, 1400.23125pt x 477.785pt>
 File: ../images/Mapreduce.png Graphic file (type png)
 <use ../images/Mapreduce.png>
-Package pdftex.def Info: ../images/Mapreduce.png  used on input line 73.
+Package pdftex.def Info: ../images/Mapreduce.png  used on input line 55.
 (pdftex.def)             Requested size: 416.91048pt x 142.26378pt.
  (../ShareText/listing1.tex) (../ShareText/maths1.tex)
-[3{C:/Users/selli/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C
+[2{C:/Users/selli/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C
 :/Users/selli/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C
 :/Users/selli/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C
 :/Users/selli/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc} <
 ../images/Mapreduce.png>]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 10.95pt on input line 90.
-) (Chapters/chapter01.tex [4]
+(Font)              scaled to size 10.95pt on input line 72.
+) (Chapters/chapter01.tex [3{C:/Users/selli/AppData/Local/Programs/MiKTeX/fonts
+/enc/dvips/libertine/lbtn_7grukw.enc}]
 Chapter 1.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 20.74pt on input line 3.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sc' will be
 (Font)              scaled to size 20.74pt on input line 3.
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 10.0pt on input line 6.
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
+(Font)              scaled to size 10.0pt on input line 6.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 6.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 6.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 6.
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sc' will be
+(Font)              scaled to size 10.0pt on input line 6.
 \c@ttl@toc@chapters=\count578
 Package mdframed Info: mdframed works in twoside mode on input line 10.
 Package mdframed Info: mdframed detected package amsthm 
@@ -2259,17 +2256,14 @@ Package mdframed Info: mdframed works in twoside mode on input line 36.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 36.
-
-Underfull \vbox (badness 2027) has occurred while \output is active []
-
- [5
+ [4
 
 ]
-Package mdframed Info: Not enough space on this page on input line 41.
 Package mdframed Info: mdframed works in twoside mode on input line 43.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 43.
+Package mdframed Info: Not enough space on this page on input line 55.
 Package mdframed Info: mdframed works in twoside mode on input line 57.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -2291,14 +2285,21 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 94.
 
-[6]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5]
 Package mdframed Info: mdframed works in twoside mode on input line 127.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 127.
 LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 17.28pt on input line 150.
- [7] [8]) (Chapters/chapter02.tex [9] [10] [11]
+
+[6]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7])
+(Chapters/chapter02.tex [8] [9] [10]
 Chapter 2.
 Package mdframed Info: mdframed works in twoside mode on input line 11.
 Package mdframed Info: mdframed detected package amsthm 
@@ -2307,7 +2308,7 @@ Package mdframed Info: mdframed detected package amsthm
 (manuscrit.ptc)
 Package mdframed Info: mdframed inside a box 
  mdframed uses option nobreak mdframed on input line 11.
- [12
+ [11
 
 ]
 (C:\Users\selli\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
@@ -2315,7 +2316,7 @@ File: lstlang1.sty 2025/11/14 1.11b listings language file
 )
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [13]
+ [12]
 Package mdframed Info: mdframed works in twoside mode on input line 65.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -2326,11 +2327,11 @@ File: lstlang1.sty 2025/11/14 1.11b listings language file
 )
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [14]
+ [13]
 LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/b/n' will be
 (Font)              scaled to size 10.95pt on input line 101.
 
-[15{C:/Users/selli/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/libertine/lbtn
+[14{C:/Users/selli/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/libertine/lbtn
 _7f4ce4.enc}]
 Package mdframed Info: mdframed works in twoside mode on input line 143.
 Package mdframed Info: mdframed detected package amsthm 
@@ -2369,8 +2370,8 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [16{C:/Users/selli/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/libertine/lbt
-n_dhi6qf.enc}]) (Chapters/chapter03.tex [17]
+ [15{C:/Users/selli/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/libertine/lbt
+n_dhi6qf.enc}]) (Chapters/chapter03.tex [16]
 Chapter 3.
 Package mdframed Info: mdframed works in twoside mode on input line 11.
 Package mdframed Info: mdframed detected package amsthm 
@@ -2379,16 +2380,16 @@ Package mdframed Info: mdframed detected package amsthm
 (manuscrit.ptc)
 Package mdframed Info: mdframed inside a box 
  mdframed uses option nobreak mdframed on input line 11.
- [18
+ [17
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [19])
-(Chapters/conclu.tex [20]
+ [18])
+(Chapters/conclu.tex [19]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [21
+ [20
 
 ])
 
@@ -2398,7 +2399,7 @@ No file manuscrit.gls.
 
 Package glossaries-extra Warning: Glossary `main' is missing on input line 95.
 
-[22]
+[21]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineMonoT-TLF/m/n' in size <10.95>
  not available
 (Font)              Font shape `T1/LinuxLibertineMonoT-TLF/regular/n' tried ins
@@ -2418,10 +2419,10 @@ No file manuscrit.acr.
 Package glossaries-extra Warning: Glossary `acronym' is missing on input line 9
 7.
 
-[23
+[22
 
 
-] (Annexes/annex01.tex [24
+] (Annexes/annex01.tex [23
 
 
 ]
@@ -2429,22 +2430,22 @@ Appendix A.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [25
+ [24
 
 ])
-(Annexes/annex02.tex [26]
+(Annexes/annex02.tex [25]
 Appendix B.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [27
+ [26
 
 ])
-(quatriemeDeCouverture.tex [28])
+(quatriemeDeCouverture.tex [27])
 \tf@ptc=\write11
 \openout11 = `manuscrit.ptc'.
 
- [29] (manuscrit.aux)
+ [28] (manuscrit.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2020/03/25>
@@ -2456,14 +2457,8 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-
-Package rerunfilecheck Warning: File `manuscrit.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `manuscrit.out':
-(rerunfilecheck)             Before: 39590B9213B910F153F9347BF1177294;5920
-(rerunfilecheck)             After:  215BCFFFE16F4622F8B18F38CC149CD2;5920.
+Package rerunfilecheck Info: File `manuscrit.out' has not changed.
+(rerunfilecheck)             Checksum: 3BA0BD0775CCD1C79C0D4FB35A2BE533;5301.
 
 Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                manuscrit
@@ -2474,17 +2469,13 @@ Package logreq Info: Writing requests to 'manuscrit.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 63001 strings out of 467866
- 1399556 string characters out of 5418326
- 2802071 words of memory out of 5000000
- 90613 multiletter control sequences out of 15000+600000
+ 62920 strings out of 467866
+ 1397675 string characters out of 5418326
+ 2799957 words of memory out of 5000000
+ 90546 multiletter control sequences out of 15000+600000
  807654 words of font info for 149 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 89i,21n,120p,2548b,2612s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{paragraph*.35} has been referenced but does not exi
-st, replaced by a fixed one
-
+ 89i,21n,120p,2548b,2601s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{glo:llm} has been referenced but does not exist, re
 placed by a fixed one
@@ -2505,34 +2496,6 @@ pdfTeX warning (dest): name{glo:EPISEN} has been referenced but does not exist,
 pdfTeX warning (dest): name{glo:latex} has been referenced but does not exist, 
 replaced by a fixed one
 
-
-pdfTeX warning (dest): name{figure.caption.22} has been referenced but does not
- exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{figure.caption.19} has been referenced but does not
- exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{figure.caption.11} has been referenced but does not
- exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section*.30} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section*.28} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{chapter*.23} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section*.9} has been referenced but does not exist,
- replaced by a fixed one
-
 <C:/Users/selli/AppData/Local/Programs/MiKTeX/fonts/type1/public/libertine/LinB
 iolinumT.pfb><C:/Users/selli/AppData/Local/Programs/MiKTeX/fonts/type1/public/l
 ibertine/LinBiolinumTB.pfb><C:/Users/selli/AppData/Local/Programs/MiKTeX/fonts/
@@ -2551,9 +2514,9 @@ ublic/lm/lmr8.pfb><C:/Users/selli/AppData/Local/Programs/MiKTeX/fonts/type1/pub
 lic/lm/lmsy10.pfb><C:/Users/selli/AppData/Local/Programs/MiKTeX/fonts/type1/pub
 lic/lm/lmsy8.pfb><C:/Users/selli/AppData/Local/Programs/MiKTeX/fonts/type1/publ
 ic/amsfonts/symbols/msam10.pfb>
-Output written on manuscrit.pdf (34 pages, 925830 bytes).
+Output written on manuscrit.pdf (33 pages, 913382 bytes).
 PDF statistics:
- 817 PDF objects out of 1000 (max. 8388607)
- 222 named destinations out of 1000 (max. 500000)
- 372 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 770 PDF objects out of 1000 (max. 8388607)
+ 208 named destinations out of 1000 (max. 500000)
+ 340 words of extra memory for PDF output out of 10000 (max. 10000000)
 
