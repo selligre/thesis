@@ -1,0 +1,40 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% MODIFIER ICI POUR VOTRE PAGE DE TITRE SI BESOIN (sous-titre p. ex.)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title[\TheManuscritTitle]{\bfseries\TheManuscritTitle}
+%\subtitle{VOTRE SOUS-TITRE ICI SI BESOIN}
+
+\author[\TheAuthorManuscript]{\TheAuthorManuscript}
+\institute[EPISEN]{{\bf \'E}cole {\bf P}ublique d'{\bf I}ngénieurs de la {\bf S}anté {\bf E}t du {\bf N}umérique (EPISEN) \\ {\bf U}niversité de {\bf P}aris-{\bf E}st {\bf C}réteil (UPEC)
+}
+
+\date{\empty}
+
+\titlegraphic{
+\begin{center}
+\hspace*{-5mm}
+\begin{tabular}{cc}
+
+  \ifthenelse{\equal{\departementEPISEN}{ITS}}
+    {
+     %%%%%%%%%%%%%%%%%%%%%%%%%%% POUR ITS
+      \includegraphics[height=2cm]{../images/logos/en-tete_EPISEN-ITS.png} &
+      \includegraphics[height=2cm]{../images/logos/entrepriseLogo.png}\\
+    }
+    {
+      \ifthenelse{\equal{\departementEPISEN}{SI}}
+        {
+         %%%%%%%%%%%%%%%%%%%%%%%%%%% POUR SI
+          \includegraphics[height=2cm]{../images/logos/en-tete_EPISEN-SI.png} & $\quad$
+          \includegraphics[height=2cm]{../images/logos/entrepriseLogo.png}\\
+        }
+        {
+          %%%%%%%%%%%%%%%%%%%%%%%%%%% POUR ISBS
+          \includegraphics[height=2cm]{../images/logos/en-tete_EPISEN-ISBS.png} &
+          \includegraphics[height=2cm]{../images/logos/entrepriseLogo.png}\\
+        }
+    }
+ \end{tabular}
+ \end{center}
+}

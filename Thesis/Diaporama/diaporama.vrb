@@ -1,0 +1,27 @@
+\frametitle{Un peu de maths}
+
+\visible<1->{
+\begin{block}{La formule dans \textcolor{redUPEC}{ShareText}}
+\input{../ShareText/maths1.tex}
+\end{block}
+}
+
+\visible<2->{
+\begin{block}{Le tableau dans \textcolor{redUPEC}{ShareText}}
+\begin{small}
+\input{../ShareText/tab1.tex}
+\end{small}
+\end{block}
+}
+
+\visible<3->{
+\begin{alertblock}{Théoreme, un résultat très important !}
+\[
+1+(-1)^n=\begin{cases}
+			0, & \text{if $n$ odd}\\
+            2, & \text{otherwise}
+		 \end{cases}
+\]
+\end{alertblock}
+}
+

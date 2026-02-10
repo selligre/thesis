@@ -1,0 +1,234 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Deuxième chapitre}
+\label{chap:two}
+
+\epigraph{\itshape Si resté est ce texte, 0/20 tu auras bien mérité}{-- Gava Yoda}
+
+\stopcontents[chapters]
+\startcontents[chapters]
+
+\printMyMinitoc
+
+Texte après le mini-plan que vous pouvez mettre ici. Vous pouvez parler du contenu du chapitre et rappelez où nous en sommes dans l'avancement du mémoire.\newline
+{\noindent \color{colorEPISEN-MEMOIRE}\textbf{Objectifs}}:
+\begin{itemizeEPISEN}
+	\item Réviser les bases ...
+	\item Analyser ... 
+	\item Rappeler ...
+\end{itemizeEPISEN}
+
+\fancyhead[LE]{\textsc{\chaptername~\thechapter}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Titre section 1 (second chapitre)}
+\label{sec:two:one}
+
+\lipsum[4] 
+
+\lipsum[5] 
+
+\section{Des codes}
+\label{sec:two:two}
+
+\lipsum[6]
+
+\subsection{Java}
+
+\lipsum[7]
+
+\begin{java}
+public class {
+	...
+	public static void main(String arg){
+		System.out.println("sdmklfjsdfj dfsdf ");
+		/* A loop */
+		for(int i=0;i<n;i++)
+			if (1=1)
+				Toto.add(i)
+	}
+}
+\end{java}
+
+\lipsum[8]
+
+\subsection{Code Python}
+
+\lipsum[9]
+
+On peut aussi mettre une barre devant les codes (exemple ci-dessous) et même
+mettre dans des figures (voir Figure~\ref{fig:code1}). Cela fait beaucoup de couleur je trouve mais si vous aimez, ca fonctionne.
+
+\begin{code}
+\begin{python}
+# Les listes :
+maListeDeMeubles = ['table','chaise','frigo']
+maListeDeMeubles.sort()  #Tri de la liste
+
+# A loop et avec des maths $x=\int_{i=1}^n \sin{x}$
+for unMeuble in maListeDeMeubles:
+   print('longueur de la chaîne ', unMeuble, '=', len(unMeuble))
+
+#les listes imbriquées:
+laListeDesNombresPairs = [unNombre for unNombre in range(1000) if unNombre % 2 == 0]
+print (laListeDesNombresPairs)
+
+#Les dictionnaires :
+unAnnuaire = {'Laurent': 6389565, 'Paul': 6356785}
+for unNom, x in unAnnuaire.items():
+   print("le nom %s a pour numéro de téléphone %d" %(unNom, x))
+
+
+#Les tuples (n-uplet) : séquence constante
+Couleur = ('Rouge', 'Bleu', 'Vert')
+print(Couleur[0], Couleur[1],  Couleur[2])
+
+PointDeReference = (100, 200)
+print(" x0 = %d   y0 = %d "  %(PointDeReference[0],PointDeReference[1]))
+\end{python}
+\end{code}
+
+\lipsum[10]
+
+\subsection{Code R (maths)}
+
+\lipsum[11]
+
+\begin{R}
+data <- read.table("data.dat", header = FALSE, sep = "")
+M <- data.frame(n1, n2, m)
+x <- 1:30
+
+fib <- function(n) {
+|	if (n < 2)
+|	| n
+|	else
+|	| fib(n - 1) + fib(n - 2)
+}
+
+fib(10) # => 55
+
+myfun <- function(S, F) {
+|	data <- read.table(F)
+|	plot(data$V1, data$V2, type="l")
+|	title(S)
+}
+
+for(i in 1:length(species)) {
+|	data <- read.table(file[i]) # lit les données
+|	plot(data$V1, data$V2, type="l")
+|	title(species[i]) # ajoute le titre
+}
+
+#Calculate CE for each counterparty
+Value.A <- data.frame() #MTM value of each contract within cp A
+# ...
+for(i in 1:length(foo)){
+|	if(isTrue(as.character(portfolio_data[i,1])=="A")==TRUE){
+|	# ...
+}
+\end{R}
+
+\lipsum[12]
+
+\subsection{Code source sans formatage}
+
+\lipsum[13]
+
+Exemple d'un Makefile (mais mettez ce que vous voulez, du HTML, des scripts, la sortie
+standard de votre shell, {\it etc.} ou du textt+maths)
+\begin{codeExample}
+\begin{small}
+\begin{verbatim}
+fast:
+	pdflatex memoire.tex
+
+memoire: all
+
+manuscrit: memoire
+
+all:
+	pdflatex memoire.tex
+	pdflatex memoire.tex
+
+clean:
+	rm -f memoire.pdf memoire.aux  memoire-blx.bib memoire.lot memoire.mtc0 	
+
+allClean: clean
+	rm -f *.pdf
+\end{verbatim}
+\end{small}
+\end{codeExample}
+
+\lipsum[14]
+
+\lipsum[15]
+
+\begin{figure}[!t]
+\begin{code}
+\begin{java}
+public class {
+|	...
+|	public static void main(String arg){
+|	|	System.out.println("sdmklfjsdfj dfsdf ");
+|	|	/* A loop et avec des maths $x=\int_{i=1}^n \sin{x}$ */
+|	|	for(int i=0;i<n;i++)
+|	|	|	if (1=1)
+|	|	|	|	Toto.add(i)
+|	}
+}
+\end{java}
+\end{code}
+\caption{Un exemple de code Java dans une figure.}
+\label{fig:code1}
+\end{figure}
+
+Et un exemple d'Algorithme~\ref{algo:level}. Vous pouvez faire une table des algorithme mais je laisse cela en exercice à ceux qui en auraient besoin...
+
+\begin{algorithm}[!t]
+\SetAlgoLined
+\SetKwInOut{Input}{\color{colorEPISEN-MEMOIRE}input}
+\SetKwInOut{Output}{\color{colorEPISEN-MEMOIRE}output}
+\SetKwData{indegreeMap}{indegreeMap}
+%\SetKwFunction{FindCompress}{FindCompress}
+\Input{A boolean circuit $G$}
+\Output{The level of each gate $v \in G$}
+\BlankLine
+inLevelMap $\leftarrow \{ (v\!\Rightarrow\!0) \ \ \forall v\!\in V_{in} \}$ \;
+slice $\leftarrow [ v                 \ \ \forall v\!\in V_{in} ]$ \;
+accu $\leftarrow \emptyset$ \;
+numOfSlices $\leftarrow 0$ \;
+\While{slice $\neq \emptyset$}{
+	accu $\leftarrow$ accu $\oplus$ slice \;
+	newSlice $\leftarrow$ $[]$ \;
+	\For{v $\in$ slice}{
+		\For{(v',e) $\in \mathbf{edges}(G,v)$}{
+			inLevelMap[e] $\leftarrow$ inLevelMap[e]-1 \;
+			\If{inLevelMap[e] $\neq 0$}{
+				newSlice $\leftarrow$ newSlice $\oplus$ e
+			}
+		}
+	}
+	slice $\leftarrow$ newSlice \;
+	numOfSlices++
+}
+\Return accu, numOfSlices-1
+
+%$\{v: d \ for v, d in G.in_degree().items() if d > 0 \}$ \;
+%\While{not at end of this document}{
+%read current\;
+%\eIf{understand}{
+%go to next section\;
+%current section becomes this one\;
+%}{
+%go back to the beginning of current section\;
+%}
+%}
+\caption{Building the level of each gate.}
+\label{algo:level}
+\end{algorithm}
+
+\lipsum[16]

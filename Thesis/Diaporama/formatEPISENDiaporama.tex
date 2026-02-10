@@ -1,0 +1,304 @@
+\usepackage{catchfile}
+\usepackage{ifthen}
+\CatchFileDef\TheLanguage{../language.tex}{\endlinechar=-1}
+\ifthenelse{\equal{\TheLanguage}{french}}
+ {
+  \usepackage[french]{babel}
+ }
+ {
+  \usepackage[english]{babel} 
+ }
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amscd,amsthm}
+\usepackage{latexsym}
+\usepackage{eurosym}
+%%%%%% FONT
+\usepackage{libertine}
+    %other font
+    %\usepackage{times}
+    %\usepackage{euscript}
+    %\usepackage{avant}
+    %\usepackage{mathptmx}
+    %\usepackage{microtype}
+    %\usepackage{bbm}
+\usepackage{pifont}
+\usepackage{graphicx}
+%\usepackage{algorithmic}
+%\usepackage{algorithm}
+\usepackage{textpos}
+\usepackage[normalem]{ulem}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+ \usetikzlibrary{automata,calc,shapes,mindmap,shadows,arrows,arrows.meta,patterns,matrix,positioning,snakes}
+\usepackage{tikzsymbols}
+\usepackage[all]{xy}
+\usepackage{listings}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{makecell}
+\usepackage{hhline}
+%\usepackage[framemethod=TikZ]{mdframed}
+%\usepackage{diagbox}
+\usepackage{stmaryrd}
+\usepackage{fdsymbol}
+\usepackage{colortbl}
+\usepackage{catchfile}
+\usepackage{ifthen}
+\usepackage[lined,ruled,onelanguage,commentsnumbered,linesnumbered,inoutnumbered]{algorithm2e}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.9}
+% We will externalize the figures
+\usepgfplotslibrary{external}
+%\tikzexternalize
+
+\input{../departementEPISEN}
+\input{../colorsEPISEN}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%  VOUS POUVEZ APPORTER QUELQUES AJOUTS ICI
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Lecture des fichiers et données partagées
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\CatchFileDef\TheManuscritTitle{../titre.tex}{\endlinechar=-1}
+\CatchFileDef\TheAuthorEmail{../email.tex}{\endlinechar=-1}
+\CatchFileDef\TheAuthorManuscript{../auteur.tex}{\endlinechar=-1}
+\CatchFileDef\TheMemoireSubject{../sujet.tex}{\endlinechar=-1}
+\CatchFileDef\TheMemoireKeywords{../keywords.tex}{\endlinechar=-1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% MODIFIER ICI POUR VOTRE PDF SI BESOIN
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\hypersetup{
+  urlcolor=linkEpisenMEMOIRE,
+  urlbordercolor=linkEpisenMEMOIRE,
+  linkcolor=black,
+  linkbordercolor=linkEpisenMEMOIRE,
+  citecolor=linkEpisenMEMOIRE,
+  citebordercolor=linkEpisenMEMOIRE,
+  anchorcolor=linkEpisenMEMOIRE,
+  pdftitle=\TheManuscritTitle,
+  pdfauthor=\TheAuthorManuscript\\ (\TheAuthorEmail),
+  pdfsubject=\TheMemoireSubject,
+  pdfkeywords=\TheMemoireSubject
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% MODIFIER ICI pour les package tikz
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usetikzlibrary{automata,positioning}
+\AtBeginEnvironment{tikzpicture}{\tracinglostchars=0\relax}   % ==> pour éviter des warnings sur un nullfont
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Programme
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%% Java
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lstdefinestyle{myJava}{language=java, 
+  keywordstyle=\bfseries\color{black},
+  basicstyle=\normalfont,
+  commentstyle=\color{linkEpisenGris},
+  stringstyle=\color{redUPEC},
+   keepspaces=true, 
+    numbers=left,
+    numbersep=9pt,
+    numberstyle=\tiny\color{linkEpisenGris},
+    xleftmargin=20pt,
+    framexleftmargin=1.77em,
+    showstringspaces=true,
+    showtabs=false,
+    tabsize=2,
+  breaklines=true,         % sets automatic line breaking
+  breakatwhitespace=false, % sets if automatic breaks should only happen at whitespace
+  columns=flexible,
+  morekeywords={String, sealed, permits, System,out,println,-,+,*,/,++,--,<,>,=,!,!=},
+  otherkeywords={\%*\%,+,!,!=,\&,<,>,=,++,--,\%/\%,\%\%},
+  identifierstyle=\normalfont\itshape,
+  literate=%
+        {é}{{\'e}}1
+        {è}{{\`e}}1
+        {ê}{{\^e}}1
+        {à}{{\`a}}1
+        {â}{{\^a}}1
+        {î}{{\^i}}1
+        {ç}{{c}}1
+        {ù}{{\`u}}1
+      {|}{{$\hskip .001em\smash{\color{linkEpisenGris}\big|}\hskip .5em$}{ }}{1},
+    mathescape=true,
+}
+
+\lstnewenvironment{java}
+   {\lstset{style=myJava}}
+   {}
+
+
+
+
+
+%%% Python
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\lstdefinestyle{myPython}{language=python, 
+  keywordstyle=\bfseries\color{black},
+  basicstyle=\normalfont,
+  commentstyle=\color{linkEpisenGris},
+  stringstyle=\color{redUPEC},
+    keepspaces=true, 
+    numbers=left,
+    numbersep=9pt,
+    numberstyle=\tiny\color{linkEpisenGris},
+    xleftmargin=20pt,
+    framexleftmargin=1.5em,
+    showstringspaces=true,
+    showtabs=false,
+    tabsize=2,
+  breaklines=true,         % sets automatic line breaking
+  breakatwhitespace=false, % sets if automatic breaks should only happen at whitespace
+  columns=flexible,
+  morekeywords={-,+,*,/,++,--,<,>,=,!,!=},
+  otherkeywords={\%*\%,+,!,!=,\&,<,>,=,\%/\%,\%\%},
+  identifierstyle=\normalfont\itshape,
+  literate=%
+        {é}{{\'e}}1
+        {è}{{\`e}}1
+        {ê}{{\^e}}1
+        {à}{{\`a}}1
+        {â}{{\^a}}1
+        {î}{{\^i}}1
+        {ç}{{c}}1
+        {ù}{{\`u}}1
+      {|}{{$\hskip .001em\smash{\color{linkEpisenGris}\Big|}\hskip .5em$}{ }}{1},
+    mathescape=true,
+}
+
+\lstnewenvironment{python}
+   {\lstset{style=myPython}}
+   {}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%  A PRIORI, NE PLUS MODIFIER LA SUITE DE CE FICHIER !
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Format des slides BEAMER
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mode<presentation>
+{
+ %\usetheme{Warsaw}
+ \usetheme{Frankfurt}
+ \beamertemplateshadingbackground{linkEpisenMemoireUltraLight}{colorEPISEN-MEMOIRE!90}
+ % ????? \setbeamercovered{transparent}
+ \setbeamercovered{invisible}
+ %\usefonttheme{serif}
+ %\usefonttheme{structuresmallcapsserif}
+}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{itemize item}[ball]
+\setbeamertemplate{itemize subitem}[circle] 
+\setbeamertemplate{itemize subsubitem}[triangle]
+\useoutertheme[subsection=false]{miniframes}
+
+
+
+\setbeamercolor{title}{bg=colorEPISEN-MEMOIRE, fg=white}
+\setbeamercolor{frametitle}{bg=linkEpisenPosterLight, fg=black}
+%\setbeamerfont{section in head/foot}{size=\tiny, shape=\scshape}
+\setbeamercolor{section in head/foot}{fg=white, bg=black}
+
+% \setbeamertemplate{blocks}[rounded][shadow=false]
+% \addtobeamertemplate{block begin}{\pgfsetfillopacity{0.8}}{\pgfsetfillopacity{1}}
+%\setbeamercolor{structure}{fg=white}
+\setbeamercolor*{block title}{fg=black, bg=colorEPISEN-MEMOIRE!17}
+\setbeamercolor*{block title example}{fg=black, bg=colorEPISEN-MEMOIRE!17}
+
+
+%\setbeamertemplate{itemize item}{\color{yellow}$\blacksquare$}
+\setbeamertemplate{itemize item}{\color{linkEpisenGris}$\blacktriangleright$}
+\setbeamertemplate{itemize subitem}{\footnotesize\color{linkEpisenGris}$\medblackcircle$}
+
+%\setbeamertemplate{enumerate items}[default]
+%\setbeamercolor*{enumerate item}{fg=linkEpisenGris}
+
+\setbeamercolor{item projected}{bg=colorEPISEN-MEMOIRE!90!black,fg=white}
+\setbeamertemplate{enumerate items}[circle]
+
+\setbeamercolor{section in toc}{fg=black}
+
+% \defbeamertemplate{frametitle}{section perso}[1][]{\insertframetitle}
+
+% \defbeamertemplate*{toc page}{perso}[1][]
+% {%
+%     \setbeamertemplate{background canvas}[section perso]%
+%     \setbeamertemplate{frametitle}[section perso]%
+%    \setbeamercolor{frametitle}{fg=gray}%
+%     \setbeamercolor{section in toc}{fg=white}%
+%     \setbeamercolor{subsection in toc}{fg=white}%
+%     \setbeamercolor{subsubsection in toc}{fg=white}%
+% }
+
+\defbeamertemplate*{footline}{infolines theme}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.9\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[ignorebg, wd=.1\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+    \usebeamerfont{date in head/foot} { {\color{black}\bfseries \insertframenumber{} / \inserttotalframenumber}}\hspace*{2ex} 
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
+\ifthenelse{\equal{\TheLanguage}{french}}
+ {\setbeamertemplate{Table des matières}[sections numbered]}
+ {\setbeamertemplate{Outline}[sections numbered]}
+
+\beamerdefaultoverlayspecification{<+->}
+\beamertemplatetransparentcovereddynamic
+%\beamerboxesdeclarecolorscheme{structure}{blue}{blue!5!averagebackgroundcolor}
+%\beamertemplatenavigationsymbolsempty
+
+% *************** Les petits ronds en haut au couleur EPISEN 
+\defbeamertemplate*{mini frame}{Frankfurt}
+{%
+  \begin{pgfpicture}{0pt}{0pt}{0.1cm}{0.1cm}
+    \pgfsetcolor{colorEPISEN-MEMOIRE}
+    \pgfsetfillcolor{colorEPISEN-MEMOIRE}
+    \pgfpathcircle{\pgfpoint{0.05cm}{0.05cm}}{0.05cm}
+    \pgfusepath{fill,stroke}    
+  \end{pgfpicture}
+}
+[action]
+{ \setbeamersize{mini frame size=.14cm,mini frame offset=.03cm} }
+
+
+\addtobeamertemplate{headline}{}{\vskip0.11cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% TITRE 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{titre}

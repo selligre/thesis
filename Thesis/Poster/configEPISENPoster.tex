@@ -1,0 +1,70 @@
+\begin{poster}{
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% METTRE TRUE pour GRID pour visualiser le placement des boites
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
+	grid=false,
+	borderColor=linkEpisenGris,
+	headerColorOne=linkEpisenPoster,
+	headerColorTwo=linkEpisenPosterLight,
+	headerFontColor=black,
+	boxColorOne=linkEpisenPosterLight,
+	textborder=rectangle,
+	bgColorOne=linkEpisenPoster,
+	bgColorTwo=linkEpisenMemoireUltraLight,
+	headerborder=open,
+    boxshade=plain,
+	background=shadetb,
+	textfont=\large,   
+	headerfont=\LARGE\sf\bf,
+}
+%%% Eye Cacther %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{%unused
+}
+{
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Titre du memoire
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\sf\bf \TheManuscritTitle
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Authors
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{
+	\vspace{1em} \TheAuthorManuscript\\
+	{\smaller \url{\TheAuthorEmail}}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Logo
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{
+	\begin{tabular}{c@{\hskip 2.8cm}c@{\hskip -1.3cm}c}
+		\ifthenelse{\equal{\departementEPISEN}{ITS}}
+			{
+	 		    %%%%%%%%%%%%%%%%%%%%%%%%%%% POUR ITS
+					\begin{minipage}[c][-8ex][b]{0em}
+					\includegraphics[height=2.2cm]{../images/logos/upec-blanc-sans-baseline.png} 
+					\end{minipage} &
+					\includegraphics[height=3cm]{../images/logos/EPISEN_logo-ITS-blanc-POSTER.png} &
+					\includegraphics[height=2.3cm]{../images/logos/entrepriseLogo.png}\\
+			}
+			{
+				\ifthenelse{\equal{\departementEPISEN}{SI}}
+    			{
+					%%%%%%%%%%%%%%%%%%%%%%%%%%% POUR SI
+					\begin{minipage}[c][-8ex][b]{0em}
+					\includegraphics[height=2.2cm]{../images/logos/upec-blanc-sans-baseline.png} 
+					\end{minipage} &
+					\includegraphics[height=3cm]{../images/logos/EPISEN_logo-SI-blanc-POSTER.png} &
+					\includegraphics[height=2.3cm]{../images/logos/entrepriseLogo.png}\\
+    			}
+				{
+					%%%%%%%%%%%%%%%%%%%%%%%%%%% POUR ISBS
+					\begin{minipage}[c][-8ex][b]{0em}
+					\includegraphics[height=2.2cm]{../images/logos/upec-blanc-sans-baseline.png} 
+					\end{minipage} &
+					\includegraphics[height=3cm]{../images/logos/EPISEN_logo-ISBS-blanc-POSTER.png} &
+					\includegraphics[height=2.3cm]{../images/logos/entrepriseLogo.png}\\
+				}
+	    	}
+	\end{tabular}
+}

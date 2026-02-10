@@ -1,0 +1,67 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%  A PRIORI, NE PAS MODIFIER CE FICHIER !
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% *********************** LES COULEURS (Départements) ********************
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\definecolor{linkEpisenGris}{RGB}{81 98 111}
+\definecolor{colorEPISEN-UPEC}{HTML}{4c6172}
+%\definecolor{cadmiumred}{rgb}{0.89, 0.0, 0.13}
+\definecolor{redUPEC}{HTML}{ef293d}
+
+\ifthenelse{\equal{\departementEPISEN}{ITS}}
+  {
+   %%%%%%%%%%%%%%%%%%%%%%%%%%% POUR ITS
+   \definecolor{colorEPISEN-MEMOIRE}{HTML}{655aa0}
+   \definecolor{linkEpisenMEMOIRE}{RGB}{101 90 160}
+   \definecolor{linkEpisenPoster}{RGB}{101 90 160}
+   %\definecolor{linkEpisenPosterLight}{RGB}{223 221 238}
+   %\definecolor{linkEpisenPosterLight}{HTML}{dfddee}
+   \colorlet{linkEpisenPosterLight}{linkEpisenPoster!20}
+   \colorlet{linkEpisenMemoireUltraLight}{linkEpisenPoster!7}
+  }
+  {
+   \ifthenelse{\equal{\departementEPISEN}{SI}}
+    {
+	%%%%%%%%%%%%%%%%%%%%%%%%%%% POUR SI
+	\definecolor{colorEPISEN-MEMOIRE}{HTML}{009fe3}
+	\definecolor{linkEpisenMEMOIRE}{RGB}{0 159 227}
+	\definecolor{linkEpisenPoster}{RGB}{0 159 227}
+	%\definecolor{linkEpisenPosterLight}{RGB}{204 239 252}
+  %\definecolor{linkEpisenPosterLight}{HTML}{cceffc}
+  \colorlet{linkEpisenPosterLight}{linkEpisenPoster!20}
+  \colorlet{linkEpisenMemoireUltraLight}{linkEpisenPoster!7}
+    }
+    {
+	%%%%%%%%%%%%%%%%%%%%%%%%%%% POUR ISBS
+	\definecolor{colorEPISEN-MEMOIRE}{HTML}{2fac66}
+	\definecolor{linkEpisenMEMOIRE}{RGB}{47 172 102}
+	\definecolor{linkEpisenPoster}{RGB}{47 172 102}
+  %\definecolor{linkEpisenPosterLight}{RGB}{217 241 225}
+  %\definecolor{linkEpisenPosterLight}{HTML}{d9f1e1}
+  \colorlet{linkEpisenPosterLight}{linkEpisenPoster!20}
+  \colorlet{linkEpisenMemoireUltraLight}{linkEpisenPoster!7}
+    }
+  }
+
+
+%\definecolor{linkEpisenCyan}{RGB}{0 159 227}
+%\definecolor{linkEpisenVert}{RGB}{47 172 102}
+%\definecolor{linkEpisenViolet}{RGB}{101 90 160}
+%\definecolor{colorEPISEN-SI}{HTML}{009fe3}
+%\definecolor{colorEPISEN-ISBS}{HTML}{2fac66}
+%\definecolor{colorEPISEN-ITS}{HTML}{655aa0}
+%\definecolor{colorEPISEN-UPEC}{HTML}{4c6172}

@@ -1,0 +1,52 @@
+\documentclass[compress,usepdftitle=false]{beamer}
+
+\input{formatEPISENDiaporama}
+
+\begin{document}
+
+%***************************** Titre *******************************************
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}
+\ifthenelse{\equal{\TheLanguage}{french}}
+ {\frametitle{Plan de la présentation}}
+ {\frametitle{Presentation Outline}}
+\tableofcontents
+\end{frame}
+
+
+%************************** Introduction **************************************
+\section[Introduction]{Introduction}
+%\input{introduction.tex}
+
+%************************** Ajout automatique des plans *****************************
+\AtBeginSection[]
+{
+  \begin{frame}<beamer>
+    \ifthenelse{\equal{\TheLanguage}{french}}
+ 		{\frametitle{Plan}}
+ 		{\frametitle{Outline}}
+    \tableofcontents[currentsection,currentsubsection]
+  \end{frame}
+  \subsection*{$\empty$} % bidon, pour corriger un bug sur les sous-sections
+}
+
+%************************** Part one *******************************************
+\section[Partie UN]{Une première partie}
+%\input{part1.tex}
+
+%************************** Part two *******************************************
+\section[Partie DEUX]{Une seconde partie}
+%\input{part2.tex}
+
+%************************** Part three *****************************************
+\section[Partie TROIS]{Une troisième partie}
+%\input{part3.tex}
+
+%************************** Conclu ********************************************
+\section[Conclusion]{Conclusion}
+%\input{conclusion.tex}
+
+\end{document}

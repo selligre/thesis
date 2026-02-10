@@ -1,0 +1,74 @@
+% *****************************************************************************
+% **************            SLIDE
+% *****************************************************************************
+\beamerdefaultoverlayspecification{}
+\begin{frame}[fragile]                           % IL FAUT METTRE FRAGILE A CHAQUE FOIS QU'IL Y A DU CODE A METTRE :(
+\frametitle{Un exemple de code}
+
+\vspace*{-1mm}
+\begin{block}{Un petit code}                    % Hélas, \visible<1->{   NE FONCTIONNE PAS :(   (pb de compatibilité entre package ...)
+\vspace*{-2mm}
+\begin{footnotesize}
+\begin{java}
+public class {
+|	...
+|	public static void main(String arg){
+|	|	System.out.println("sdmklfjsdfj dfsdf ");
+|	|	for(int i=0;i<n;i++)
+|	|	|	if (1=1)
+|	|	|	|	Toto.add(i)
+|	}
+}
+\end{java}
+\end{footnotesize}
+\vspace*{-2mm}
+\end{block}
+
+
+\vspace*{-1mm}
+
+\visible<2->{
+\begin{block}{Commentaires provenant du dossier ShareText}
+\input{../ShareText/listing1.tex}
+\end{block}
+}
+
+\end{frame}
+\beamerdefaultoverlayspecification{<+->}
+
+
+
+% *****************************************************************************
+% **************            SLIDE
+% *****************************************************************************
+\beamerdefaultoverlayspecification{}
+\begin{frame}[fragile]                           % IL FAUT METTRE FRAGILE A CHAQUE FOIS QU'IL Y A DU CODE A METTRE :(
+\frametitle{Un peu de maths}
+
+\visible<1->{
+\begin{block}{La formule dans \textcolor{redUPEC}{ShareText}}
+\input{../ShareText/maths1.tex}
+\end{block}
+}
+
+\visible<2->{
+\begin{block}{Le tableau dans \textcolor{redUPEC}{ShareText}}
+\begin{small}
+\input{../ShareText/tab1.tex}
+\end{small}
+\end{block}
+}
+
+\visible<3->{
+\begin{alertblock}{Théoreme, un résultat très important !}
+\[
+1+(-1)^n=\begin{cases}
+			0, & \text{if $n$ odd}\\
+            2, & \text{otherwise}
+		 \end{cases}
+\]
+\end{alertblock}
+}
+
+\end{frame}
+\beamerdefaultoverlayspecification{<+->}

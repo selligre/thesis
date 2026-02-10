@@ -1,0 +1,24 @@
+Pb glossary avec Overleaf
+ Solution ???? ==> https://tex.stackexchange.com/questions/728356/why-latexmk-is-not-able-to-run-shell-escape-with-auxdir
+ Solution ???
+    \usepackage[automake]{glossaries-extra}
+    ===> \usepackage[toc,acronym]{glossaries-extra}   (dans formatEPISENManuscrit.tex)
+
+Testez
+  https://tex.stackexchange.com/questions/118489/what-exactly-is-synctex
+  "pdflatex" -synctex=1 -interaction=nonstopmode %.tex
+  et latexmk -pvc
+      https://les-mathematiques.net/vanilla/discussion/1396000/latexmk-pvc-texmaker
+
+
+
+Overleaf en docker
+   https://www.reddit.com/r/LaTeX/comments/1as53qy/an_easy_guide_to_selfhost_overleaf_community/
+       https://shihabkhan1.github.io/overleaf/intro.html
+  https://github.com/overleaf/docker-image
+
+
+
+
+Rajouter  ????
+  \addtolength{\belowcaptionskip}{1cm}

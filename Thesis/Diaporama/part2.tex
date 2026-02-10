@@ -1,0 +1,76 @@
+% *****************************************************************************
+% **************            SLIDE
+% *****************************************************************************
+\beamerdefaultoverlayspecification{}
+\begin{frame}[fragile]                           % IL FAUT METTRE FRAGILE A CHAQUE FOIS QU'IL Y A DU CODE A METTRE :(
+\frametitle{Une courbe}
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+    title={Temperature dependence of CuSO\(_4\cdot\)5H\(_2\)O solubility},
+    xlabel={Temperature [\textcelsius]},
+    ylabel={Solubility [g per 100 g water]},
+    xmin=0, xmax=100,
+    ymin=0, ymax=120,
+    xtick={0,20,40,60,80,100},
+    ytick={0,20,40,60,80,100,120},
+    legend pos=north west,
+    ymajorgrids=true,
+    grid style=dashed,
+    grid style={redUPEC},
+]
+\addplot[
+    color=blue,
+    mark=square,
+    ]
+    coordinates {
+    (0,23.1)(10,27.5)(20,32)(30,37.8)(40,44.6)(60,61.8)(80,83.8)(100,114)
+    };
+    \legend{CuSO\(_4\cdot\)5H\(_2\)O}
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+\end{frame}
+\beamerdefaultoverlayspecification{<+->}
+
+
+% *****************************************************************************
+% **************            SLIDE
+% *****************************************************************************
+
+% Une petite contrainte
+% Si vous souhaitez ajouter du texte avec verbatim, il faut absolument faire une commande comme celle-ci
+\defverbatim{\textVerbatimOne}{\begin{verbatim}Vous avez déjà de quoi faire avec tout cela !\end{verbatim}}
+
+\beamerdefaultoverlayspecification{}
+\begin{frame}[fragile]                         % IL FAUT METTRE FRAGILE A CHAQUE FOIS QU'IL Y A DU VERBATIM :(
+\frametitle{Suite}
+
+\visible<1->{
+\begin{block}{Un automate}
+\begin{tikzpicture}[shorten >=1pt,node distance=1.3cm,on grid,auto, every node/.style={scale=0.75}, scale=0.3] 
+   \node[state,initial] (q_0)   {$q_0$}; 
+   \node[state] (q_1) [above right=of q_0] {$q_1$}; 
+   \node[state] (q_2) [below right=of q_0] {$q_2$}; 
+   \node[state,accepting](q_3) [below right=of q_1] {$q_3$};
+    \path[->] 
+    (q_0) edge  node {1} (q_1)
+          edge  node [swap] {1} (q_2)
+    (q_1) edge  node  {1} (q_3)
+          edge [loop above] node {0} ()
+    (q_2) edge  node [swap] {0} (q_3) 
+          edge [loop below] node {1} ();
+\end{tikzpicture}
+\end{block}
+}
+
+\visible<2->{
+\begin{block}{Un texte avec verbatim}
+\textVerbatimOne
+\end{block}
+}
+
+\end{frame}
+\beamerdefaultoverlayspecification{<+->}

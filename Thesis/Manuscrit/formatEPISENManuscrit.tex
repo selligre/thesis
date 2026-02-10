@@ -1,0 +1,1017 @@
+\usepackage{catchfile}
+\usepackage{ifthen}
+\CatchFileDef\TheLanguage{../language.tex}{\endlinechar=-1}
+\ifthenelse{\equal{\TheLanguage}{french}}
+ {
+  \usepackage[french]{babel}
+ }
+ {
+  \usepackage[english]{babel}	
+ }
+\usepackage{iflang}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{csquotes}
+\usepackage{lmodern}
+\usepackage[
+	natbib=true,
+	backend=biber,
+	style=numeric,
+	sorting=none,
+  backref=true,
+	sortcites
+]{biblatex}
+\addbibresource{../bibliographie.bib}
+\usepackage[a4paper,left=3cm,right=2cm,top=2.5cm,bottom=2.5cm, twoside]{geometry}
+\usepackage{xcolor}
+%%%%%% MATHS
+\usepackage{stmaryrd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{latexsym}
+\usepackage{eurosym}
+%%%%%% FONT
+\usepackage{libertine}
+		%other font
+		%\usepackage{euscript}
+		%\usepackage{avant}
+		%\usepackage{mathptmx}
+		%\usepackage{microtype}
+		%\usepackage{bm}
+		%\usepackage{bbm} 
+\usepackage[pdftex]{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+%\usepackage{nicematrix}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{apalike}
+%\usepackage{minitoc}
+\usepackage{url}
+%\usepackage[normalem]{ulem}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{epigraph}
+\usepackage{lscape}
+\usepackage{titletoc}
+\usepackage{booktabs}
+\usepackage{diagbox}
+\usepackage{arydshln}
+\usepackage{calc}
+\usepackage[]{titlesec} 
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[C]{\rule{.5\textwidth}{4\baselineskip}}% Add something BIG in the header
+\setlength{\headheight}{14pt}
+\usepackage{lipsum}
+\usepackage[]{todonotes}
+\usepackage{enumitem} % Customize lists
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{listings}
+\usepackage[lined,ruled,onelanguage,commentsnumbered,linesnumbered,inoutnumbered]{algorithm2e}
+\usepackage{setspace}\onehalfspacing
+\AtBeginDocument{%
+  \addtolength\abovedisplayskip{-0.5\baselineskip}%
+  \addtolength\belowdisplayskip{-0.5\baselineskip}%
+  \addtolength\abovedisplayshortskip{-0.5\baselineskip}%
+  \addtolength\belowdisplayshortskip{-0.5\baselineskip}%
+}
+%\usepackage[listformat=simple]{caption}
+\usepackage{chngcntr}
+\counterwithout{figure}{chapter}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.9}
+% We will externalize the figures
+\usepgfplotslibrary{external}
+%\tikzexternalize
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%  VOUS POUVEZ APPORTER QUELQUES AJOUTS ICI
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% MODIFIER ICI POUR VOTRE PDF SI BESOIN
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[colorlinks=true]{hyperref}
+\AtBeginDocument{%
+ \hypersetup{
+   urlcolor=linkEpisenMEMOIRE,
+   urlbordercolor=linkEpisenMEMOIRE,
+   linkcolor=black,
+   linkbordercolor=linkEpisenMEMOIRE,
+   citecolor=linkEpisenMEMOIRE,
+   citebordercolor=linkEpisenMEMOIRE,
+   anchorcolor=linkEpisenMEMOIRE,
+   pdfborderstyle={/S/S/W 0.7},
+   pdftitle=\TheManuscritTitle,
+   pdfauthor=\TheAuthorManuscript\\ (\TheAuthorEmail),
+   pdfsubject=\TheMemoireSubject,
+   pdfkeywords=\TheMemoireKeywords
+}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% MODIFIER ICI pour les package tikz
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usetikzlibrary{automata,positioning}
+\AtBeginEnvironment{tikzpicture}{\tracinglostchars=0\relax}   % ==> pour éviter des warnings sur un nullfont
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Ajoutez vos format de listes ici !
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newenvironment{enumerateEPISEN}
+{\begin{enumerate}[label=\color{colorEPISEN-MEMOIRE}\textbf{\arabic*.}]}
+{\end{enumerate}}
+
+\newenvironment{itemizeEPISEN}
+{\begin{itemize}[label=\color{colorEPISEN-MEMOIRE}$\blacktriangleright$]
+  \setlength{\itemsep}{0pt}%
+  \setlength{\parskip}{0pt}}
+{\end{itemize}}
+
+\newenvironment{itemizeRondEPISEN}
+{\begin{itemize}[label=\textbullet, font=\LARGE \color{colorEPISEN-MEMOIRE}] 
+  \setlength{\itemsep}{0pt}%
+  \setlength{\parskip}{0pt}}
+{\end{itemize}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Quelques commandes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% ...
+% ...
+% ...
+% ...
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Programme
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%https://tex.stackexchange.com/questions/64900/improper-alphabetic-constant
+% Lien très intéressant sur prendre directement un fichier et sélectionner
+% que certaines lignes ... (TODO) Tester aussi pour des codes accessible sur GIT
+% pour faire de l'open Science !!!!
+
+%%% Java
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lstdefinestyle{myJava}{language=java, 
+	backgroundcolor=\color{linkEpisenMemoireUltraLight!30},
+	keywordstyle=\bfseries\color{colorEPISEN-MEMOIRE},
+	basicstyle=\normalfont,
+	commentstyle=\color{linkEpisenGris},
+	stringstyle=\color{brown},
+    keepspaces=true, 
+    numbers=left,
+    numbersep=9pt,
+    numberstyle=\tiny\color{linkEpisenGris},
+    xleftmargin=20pt,
+    framexleftmargin=1.77em,
+    showstringspaces=true,
+    showtabs=false,
+    tabsize=2,
+	breaklines=true,         % sets automatic line breaking
+	breakatwhitespace=false, % sets if automatic breaks should only happen at whitespace
+	columns=flexible,
+	morekeywords={String, sealed, permits, System,out,println,-,+,*,/,++,--,<,>,=,!,!=},
+	otherkeywords={\%*\%,+,!,!=,\&,<,>,=,++,--,\%/\%,\%\%},
+	identifierstyle=\normalfont\itshape,
+	literate=%
+        {é}{{\'e}}1
+        {è}{{\`e}}1
+        {ê}{{\^e}}1
+        {à}{{\`a}}1
+        {â}{{\^a}}1
+        {î}{{\^i}}1
+        {ç}{{c}}1
+        {ù}{{\`u}}1
+    	{|}{{$\hskip .001em\smash{\color{linkEpisenGris}\Big|}\hskip .5em$}{ }}{1},
+    mathescape=true,
+}
+
+\lstnewenvironment{java}
+   {\lstset{style=myJava}}
+   {}
+
+%%% R
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lstdefinelanguage{R}{
+	keywords={abbreviate,abline,abs,acos,acosh,action,add1,add,%
+      aggregate,alias,Alias,alist,all,anova,any,aov,aperm,append,apply,%
+      approx,approxfun,apropos,Arg,args,array,arrows,as,asin,asinh,%
+      atan,atan2,atanh,attach,attr,attributes,autoload,autoloader,ave,%
+      axis,backsolve,barplot,basename,besselI,besselJ,besselK,besselY,%
+      beta,binomial,body,box,boxplot,break,browser,bug,builtins,bxp,by,%
+      c,C,call,Call,case,cat,category,cbind,ceiling,character,char,%
+      charmatch,check,chol,chol2inv,choose,chull,class,close,cm,codes,%
+      coef,coefficients,co,col,colnames,colors,colours,commandArgs,%
+      comment,complete,complex,conflicts,Conj,contents,contour,%
+      contrasts,contr,control,helmert,contrib,convolve,cooks,coords,%
+      distance,coplot,cor,cos,cosh,count,fields,cov,covratio,wt,CRAN,%
+      create,crossprod,cummax,cummin,cumprod,cumsum,curve,cut,cycle,D,%
+      data,dataentry,date,dbeta,dbinom,dcauchy,dchisq,de,debug,%
+      debugger,Defunct,default,delay,delete,deltat,demo,de,density,%
+      deparse,dependencies,Deprecated,deriv,description,detach,%
+      dev2bitmap,dev,cur,deviance,off,prev,,dexp,df,dfbetas,dffits,%
+      dgamma,dgeom,dget,dhyper,diag,diff,digamma,dim,dimnames,dir,%
+      dirname,dlnorm,dlogis,dnbinom,dnchisq,dnorm,do,dotplot,double,%
+      download,dpois,dput,drop,drop1,dsignrank,dt,dummy,dump,dunif,%
+      duplicated,dweibull,dwilcox,dyn,edit,eff,effects,eigen,else,%
+      emacs,end,environment,env,erase,eval,equal,evalq,example,exists,%
+      exit,exp,expand,expression,External,extract,extractAIC,factor,%
+      fail,family,fft,file,filled,find,fitted,fivenum,fix,floor,for,%
+      For,formals,format,formatC,formula,Fortran,forwardsolve,frame,%
+      frequency,ftable,ftable2table,function,gamma,Gamma,gammaCody,%
+      gaussian,gc,gcinfo,gctorture,get,getenv,geterrmessage,getOption,%
+      getwd,gl,glm,globalenv,gnome,GNOME,graphics,gray,grep,grey,grid,%
+      gsub,hasTsp,hat,heat,help,hist,home,hsv,httpclient,I,identify,if,%
+      ifelse,Im,image,\%in\%,index,influence,measures,inherits,install,%
+      installed,integer,interaction,interactive,Internal,intersect,%
+      inverse,invisible,IQR,is,jitter,kappa,kronecker,labels,lapply,%
+      layout,lbeta,lchoose,lcm,legend,length,levels,lgamma,library,%
+      licence,license,lines,list,lm,load,local,locator,log,log10,log1p,%
+      log2,logical,loglin,lower,lowess,ls,lsfit,lsf,ls,machine,Machine,%
+      mad,mahalanobis,make,link,margin,match,Math,matlines,mat,matplot,%
+      matpoints,matrix,max,mean,median,memory,menu,merge,methods,min,%
+      missing,Mod,mode,model,response,mosaicplot,mtext,mvfft,na,nan,%
+      names,omit,nargs,nchar,ncol,NCOL,new,next,NextMethod,nextn,%
+      nlevels,nlm,noquote,NotYetImplemented,NotYetUsed,nrow,NROW,null,%
+      numeric,\%o\%,objects,offset,old,on,Ops,optim,optimise,optimize,%
+      options,or,order,ordered,outer,package,packages,page,pairlist,%
+      pairs,palette,panel,par,parent,parse,paste,path,pbeta,pbinom,%
+      pcauchy,pchisq,pentagamma,persp,pexp,pf,pgamma,pgeom,phyper,pico,%
+      pictex,piechart,Platform,plnorm,plogis,plot,pmatch,pmax,pmin,%
+      pnbinom,pnchisq,pnorm,points,poisson,poly,polygon,polyroot,pos,%
+      postscript,power,ppoints,ppois,predict,preplot,pretty,Primitive,%
+      print,prmatrix,proc,prod,profile,proj,prompt,prop,provide,%
+      psignrank,ps,pt,ptukey,punif,pweibull,pwilcox,q,qbeta,qbinom,%
+      qcauchy,qchisq,qexp,qf,qgamma,qgeom,qhyper,qlnorm,qlogis,qnbinom,%
+      qnchisq,qnorm,qpois,qqline,qqnorm,qqplot,qr,Q,qty,qy,qsignrank,%
+      qt,qtukey,quantile,quasi,quit,qunif,quote,qweibull,qwilcox,%
+      rainbow,range,rank,rbeta,rbind,rbinom,rcauchy,rchisq,Re,read,csv,%
+      csv2,fwf,readline,socket,real,Recall,rect,reformulate,regexpr,%
+      relevel,remove,rep,repeat,replace,replications,report,require,%
+      resid,residuals,restart,return,rev,rexp,rf,rgamma,rgb,rgeom,R,%
+      rhyper,rle,rlnorm,rlogis,rm,rnbinom,RNGkind,rnorm,round,row,%
+      rownames,rowsum,rpois,rsignrank,rstandard,rstudent,rt,rug,runif,%
+      rweibull,rwilcox,sample,sapply,save,scale,scan,scan,screen,sd,se,%
+      search,searchpaths,segments,seq,sequence,setdiff,setequal,set,%
+      setwd,show,sign,signif,sin,single,sinh,sink,solve,sort,source,%
+      spline,splinefun,split,sqrt,stars,start,stat,stem,step,stop,%
+      storage,strstrheight,stripplot,strsplit,structure,strwidth,sub,%
+      subset,substitute,substr,substring,sum,summary,sunflowerplot,svd,%
+      sweep,switch,symbol,symbols,symnum,sys,status,system,t,table,%
+      tabulate,tan,tanh,tapply,tempfile,terms,terrain,tetragamma,text,%
+      time,title,topo,trace,traceback,transform,tri,trigamma,trunc,try,%
+      ts,tsp,typeof,unclass,undebug,undoc,union,unique,uniroot,unix,%
+      unlink,unlist,unname,untrace,update,upper,url,UseMethod,var,%
+      variable,vector,Version,vi,warning,warnings,weighted,weights,%
+      which,while,window,write,\%x\%,x11,X11,xedit,xemacs,xinch,xor,%
+      xpdrows,xy,xyinch,yinch,zapsmall,zip},
+	otherkeywords={0,1,2,3,4,5,6,7,8,9},
+	morekeywords={TRUE,FALSE,for,if,then,else,function,in},
+	otherkeywords={-,+,!,!=,<,>,~,$,*,\&,\%/\%,\%*\%,\%\%,_,/},%
+	alsoother={._$},%
+	sensitive,%
+	morecomment=[l]{\#},%
+	morestring=[d]",%
+	morestring=[d]',
+	literate=%
+        {é}{{\'e}}1
+        {è}{{\`e}}1
+        {ê}{{\^e}}1
+        {à}{{\`a}}1
+        {â}{{\^a}}1
+        {î}{{\^i}}1
+        {ç}{{c}}1
+        {ù}{{\`u}}1
+    	{|}{{$\hskip .001em\smash{\color{linkEpisenGris}\Big|}\hskip .5em$}{ }}{1},
+}
+
+\lstdefinestyle{myR}{
+	language=R,
+	backgroundcolor=\color{linkEpisenMemoireUltraLight!30},
+	keywordstyle=\bfseries\color{colorEPISEN-MEMOIRE},
+	basicstyle=\normalfont,
+	stringstyle=\color{brown},
+	commentstyle=\color{linkEpisenGris},
+	keepspaces=true, 
+    numbers=left,
+    numbersep=9pt,
+    numberstyle=\tiny\color{linkEpisenGris},
+    xleftmargin=20pt,
+    framexleftmargin=1.5em,
+    showstringspaces=true,
+    tabsize=2,
+	breaklines=true,         % sets automatic line breaking
+	breakatwhitespace=false, % sets if automatic breaks should only happen at whitespace
+	columns=flexible,
+    escapeinside={\%*}{*)},
+    identifierstyle=\normalfont\itshape,
+} 
+
+\lstnewenvironment{R}
+    {\lstset{style=myR}}
+    {}
+
+%%% Python
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\lstdefinestyle{myPython}{language=python, 
+	backgroundcolor=\color{linkEpisenMemoireUltraLight!30},
+	keywordstyle=\bfseries\color{colorEPISEN-MEMOIRE},
+	basicstyle=\normalfont,
+	commentstyle=\color{linkEpisenGris},
+	stringstyle=\color{brown},
+    keepspaces=true, 
+    numbers=left,
+    numbersep=9pt,
+    numberstyle=\tiny\color{linkEpisenGris},
+    xleftmargin=20pt,
+    framexleftmargin=1.5em,
+    showstringspaces=true,
+    showtabs=false,
+    tabsize=2,
+	breaklines=true,         % sets automatic line breaking
+	breakatwhitespace=false, % sets if automatic breaks should only happen at whitespace
+	columns=flexible,
+	morekeywords={-,+,*,/,++,--,<,>,=,!,!=},
+	otherkeywords={\%*\%,+,!,!=,\&,<,>,=,\%/\%,\%\%},
+	identifierstyle=\normalfont\itshape,
+	literate=%
+        {é}{{\'e}}1
+        {è}{{\`e}}1
+        {ê}{{\^e}}1
+        {à}{{\`a}}1
+        {â}{{\^a}}1
+        {î}{{\^i}}1
+        {ç}{{c}}1
+        {ù}{{\`u}}1
+    	{|}{{$\hskip .001em\smash{\color{linkEpisenGris}\Big|}\hskip .5em$}{ }}{1},
+    mathescape=true,
+}
+
+\lstnewenvironment{python}
+   {\lstset{style=myPython}}
+   {}
+
+
+%%% Algorithmes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%https://tex.stackexchange.com/questions/668747/different-color-for-algorithm2e-keywords
+\renewcommand{\KwSty}[1]{\textnormal{\textcolor{colorEPISEN-MEMOIRE}{\bfseries #1}}\unskip}
+
+
+% ****************
+% Pour les autres langages, débrouillez vous un peu !!!
+% ****************
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%  A PRIORI, NE PLUS MODIFIER LA SUITE DE CE FICHIER !
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\urlstyle{same}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Format Glossaire
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[toc,acronym,style=listgroup]{glossaries}
+% Autre style de glossaires ici : https://www.dickimaw-books.com/gallery/glossaries-styles/
+\usepackage[automake]{glossaries-extra}
+% ===> POUR OVERLEAF
+%\usepackage[toc,acronym]{glossaries-extra}
+
+%\newglossarystyle{dottedlocations}{%
+%  \setglossarystyle{list}%
+%  \renewcommand*{\glossentry}[2]{%
+%    \item[\glsentryitem{##1}\glstarget{##1}{\glossentryname{##1}}] ##3%
+%      \unskip\leaders\hbox to 2.9mm{\hss{\color{colorEPISEN-MEMOIRE}\LARGE.}}\hfill##5}
+%  \renewcommand*{\glsgroupskip}{}%
+%}
+
+\newglossarystyle{dottedlocations}{%
+    \setglossarystyle{list}%
+    \renewcommand*{\glossentry}[2]{%
+        \item[\glsentryitem{##1}\glstarget{##1}{\glossentryname{##1}}]
+        \ifglshassymbol{##1}{[\glossentrysymbol{##1}]\quad}{}%
+        {\glossentrydesc{##1}}%
+        \unskip\leaders\hbox to 2.9mm{\hss{\color{colorEPISEN-MEMOIRE}\LARGE.}}\hfill##2}%
+    \renewcommand*{\glsgroupskip}{}%
+}
+\setglossarystyle{dottedlocations}
+
+
+\renewcommand*{\glsgroupheading}[1]{\item[]{\Huge\color{colorEPISEN-MEMOIRE}\textbf{\glsgetgrouptitle{#1}}}}
+
+\renewcommand*{\glsnumberformat}[1]{\hyperlink{page.#1}{#1}}
+
+\renewcommand{\glsnamefont}[1]{\color{colorEPISEN-MEMOIRE}\textbf{#1}}
+\setlength{\glslistdottedwidth}{.3\linewidth}
+\GlsXtrEnablePreLocationTag{ {\color{colorEPISEN-MEMOIRE}\textbf{Page~: }}}{{\color{colorEPISEN-MEMOIRE}\textbf{Pages~: }}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\AtEndDocument{\label{LastPage}}
+
+\linepenalty=1000
+\everypar=\expandafter{\the\everypar\loosness=-1 }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  BIBLIO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifthenelse{\equal{\TheLanguage}{french}}
+ {
+	\DefineBibliographyStrings{french}{%
+  		backrefpage = {cf. page},
+  		backrefpages = {cf. pages},
+  		urlseen = {disponible~:},
+  		urlfrom = {disponible à l'\textsc{url}~:},
+  		in={dans},
+  		volume={vol\adddot},
+  		pages = {pp\adddot},
+  		byeditor = {Sous la direction de}
+ 	}
+ 	\DefineBibliographyExtras{french}{\protected\def\bibrangedash{--}}
+ }
+ {
+ 	\DefineBibliographyStrings{english}{%
+  		backrefpage = {see page},
+  		backrefpages = {see pages},
+  		urlseen = {Accessed:},
+  		urlfrom = {Available at \textsc{url}:},
+  		byeditor = {Edited by}
+ 	}
+ }
+\DeclareFieldFormat{url}{\bibstring{urlfrom}\addcolon\space\url{#1}}
+
+\usepackage{xpatch}
+% No dot before number of articles
+\xpatchbibmacro{volume+number+eid}{%
+  \setunit*{\adddot}%
+}{%
+}{}{}
+
+
+% Comma before and after journal volume
+\renewbibmacro*{volume+number+eid}{%
+  \setunit*{\addcomma\space}% NEW
+  \printfield{volume}%
+%  \setunit*{\adddot}% DELETED
+  \setunit*{\addcomma\space}% NEW
+  \printfield{number}%
+  \setunit{\addcomma\space}%
+  \printfield{eid}}
+
+% Prefixes for journal volume and number
+\DeclareFieldFormat[article]{volume}{\bibstring{volume}~#1}% volume of a journal
+\DeclareFieldFormat[article]{number}{\bibstring{number}~#1,}% number of a journal
+
+
+\newtoggle{bbx:datemissing}
+
+\renewbibmacro*{date}{\toggletrue{bbx:datemissing}%
+}
+
+\renewbibmacro*{issue+date}{%
+  \toggletrue{bbx:datemissing}%
+  \iffieldundef{issue}
+    {}
+    {\printtext[parens]{%
+       \printfield{issue}}}%
+  \newunit}
+
+\newbibmacro*{date:print}{%
+  \togglefalse{bbx:datemissing}%
+  \printdate}
+
+\renewbibmacro*{chapter+pages}{%
+  \printfield{chapter}%
+  \setunit{\bibpagespunct}%
+  \printfield{pages}%
+  \newunit
+  \setunit*{\addcomma\space}
+  \usebibmacro{date:print}%
+  \newunit}
+
+\renewbibmacro*{note+pages}{%
+  \printfield{note}%
+  \setunit{\bibpagespunct}%
+  \printfield{pages}%
+  \newunit
+  \setunit*{\addcomma\space}
+  \usebibmacro{date:print}%
+  \newunit}
+
+\renewbibmacro*{addendum+pubstate}{%
+  \iftoggle{bbx:datemissing}
+    {\usebibmacro{date:print}}
+    {}%
+  \printfield{addendum}%
+  \newunit\newblock
+  \printfield{pubstate}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Lecture des fichiers et données partagées
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\CatchFileDef\TheManuscritTitle{../titre.tex}{\endlinechar=-1}
+\CatchFileDef\TheAuthorEmail{../email.tex}{\endlinechar=-1}
+\CatchFileDef\TheAuthorManuscript{../auteur.tex}{\endlinechar=-1}
+\CatchFileDef\TheMemoireSubject{../sujet.tex}{\endlinechar=-1}
+\CatchFileDef\TheMemoireKeywords{../keywords.tex}{\endlinechar=-1}
+
+\input{../departementEPISEN}
+\input{../colorsEPISEN}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Format of the Chapter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titleformat{\chapter}[display]
+{\normalfont\color{colorEPISEN-MEMOIRE}}
+{\filleft\huge\normalcolor\textsc\chaptertitlename\hspace*{2mm}%
+	\begin{tikzpicture}[baseline={([yshift=-.6ex]current bounding box.center)}]
+    \node[fill=colorEPISEN-MEMOIRE,circle,text=white] {\thechapter};
+	\end{tikzpicture}
+}
+{1ex}
+{\titlerule[2.5pt]\vspace*{1.5ex}\Huge\normalcolor\textsc}
+[]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Format of the "Table of Contents"
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Chapter text styling
+\titlecontents{chapter}
+	[10.4mm] % Left indentation
+	{\addvspace{10pt}\Large\sffamily\bfseries} % Spacing and font options for chapters
+	{
+	 \hspace*{-12.4mm}
+	 \begin{tikzpicture}[baseline={([yshift=-.6ex]current bounding box.center)}]
+       \node[fill=colorEPISEN-MEMOIRE,circle,text=white] {\thecontentslabel};
+  	  \end{tikzpicture}
+  	  %\color{colorEPISEN-MEMOIRE}\contentslabel[\Large\thecontentslabel]{5mm}\normalcolor} 
+    }
+	{} % Formatting of numberless sections of this type
+	{\color{colorEPISEN-MEMOIRE}\normalsize\;\titlerule*[.5pc]{.}\;\Large\thecontentspage\normalcolor} % Formatting of the filler to the right of the heading and the page number
+
+
+% Part text styling (this is mostly taken care of in the PART HEADINGS section of this file)
+\titlecontents{part}
+	[0cm] % Left indentation
+	{\addvspace{20pt}\bfseries} % Spacing and font options for parts
+	{}
+	{}
+	{}
+
+% Section text styling
+\titlecontents{section}
+	[18.4mm] % Left indentation
+	{\addvspace{4pt}\sffamily\bfseries} % Spacing and font options for sections
+	{\contentslabel[\thecontentslabel]{7mm}} % Formatting of numbered sections of this type
+	{} % Formatting of numberless sections of this type
+	{\ \titlerule*[.5pc]{.}\;\thecontentspage} % Formatting of the filler to the right of the heading and the page number
+
+% Subsection text styling
+\titlecontents{subsection}
+	[21.6mm] % Left indentation
+	{\addvspace{3pt}\sffamily\small} % Spacing and font options for subsections
+	{\contentslabel[\thecontentslabel]{7mm}} % Formatting of numbered sections of this type
+	{} % Formatting of numberless sections of this type
+	{\ \titlerule*[.5pc]{.}\;\thecontentspage} % Formatting of the filler to the right of the heading and the page number
+
+\titleformat*{\section}{\LARGE\bfseries}
+\titleformat*{\subsection}{\Large\bfseries}
+
+\makeatletter
+\renewcommand\@seccntformat[1]{\color{colorEPISEN-MEMOIRE} {\csname the#1\endcsname}\hspace{0.5em}}
+
+ \renewcommand{\subsubsection}{\@startsection {subsubsection}{3}{\z@}
+ {.2ex}
+ {.2ex}
+ {{\color{colorEPISEN-MEMOIRE} \hspace*{-18pt} $\blacktriangleright$\ } \normalfont\bfseries}}
+
+\makeatother
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Format of the "Table of Figures"
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Figure text styling
+\titlecontents{figure}
+	[15pt] % Left indentation
+	{\vspace*{5pt}} % Spacing and font options for figures
+	{
+	\begin{tikzpicture}[baseline={([yshift=-.6ex]current bounding box.center)}]
+       \node[fill=colorEPISEN-MEMOIRE,circle,text=white] {\thecontentslabel};
+  	\end{tikzpicture}
+	\hspace*{1pt}} % Formatting of numbered sections of this type
+	{} % Formatting of numberless sections of this type
+	{\color{colorEPISEN-MEMOIRE} \ \titlerule*[.5pc]{.}\;\normalcolor\thecontentspage} % Formatting of the filler to the right of the heading and the page number
+
+
+\newcommand*{\noaddvspace}{\renewcommand*{\addvspace}[1]{}}
+\addtocontents{lof}{\protect\noaddvspace}
+\addtocontents{lof}{\linespread{1}\selectfont}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Format of the mini "Table of Contents"  (minitoc)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%command to print the actual minitoc
+\newcommand{\printMyMinitoc}{%
+	\noindent\hspace{1cm}%
+	%\colorlet{chpnumbercolor}{black}%
+	\begin{tikzpicture}
+	\node(s){
+	    \normalcolor
+		\begin{minipage}{.9\linewidth}%minipage trick
+		\begin{tocBox}		
+		\printcontents[chapters]{}{1}{}
+		\end{tocBox}
+		\end{minipage}
+	};
+	{
+        \color{colorEPISEN-MEMOIRE}
+
+		\draw[line width=1.5pt](s.north west)--(s.north east) (s.south west)--(s.south east);
+	}
+	\end{tikzpicture}
+}
+
+\setlength\afterepigraphskip{-5pt}
+\setlength\beforeepigraphskip{-20pt}
+
+\let\originalepigraph\epigraph 
+\renewcommand\epigraph[2]{\originalepigraph{\textit{#1}\color{colorEPISEN-MEMOIRE}}{\textsc{#2}}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Format de la page de titre
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand\titlepagedecoration{
+
+	\begin{tikzpicture}[remember picture,overlay,shorten >= -10pt]
+		
+		\coordinate (aux1) at ([yshift=-284pt]current page.north east);
+		\coordinate (aux2) at ([yshift=-679pt]current page.north east);
+		\coordinate (aux3) at ([xshift=-4.5cm, yshift=-284pt]current page.north east) ;
+		\coordinate (aux4) at ([yshift=-419pt]current page.north east);
+		\coordinate (aux5) at ([yshift=-724pt]current page.north east);
+		\coordinate (aux6) at ([yshift=-219pt]current page.north east);
+		
+		\begin{scope}[colorEPISEN-MEMOIRE,line width=12pt,rounded corners=12pt]
+			\draw
+			(aux1) -- coordinate (a)
+			++(225:5) --
+			++(-45:5.1) coordinate (b);
+			\draw[shorten <= -10pt]
+			(aux3) --
+			(a) --
+			(aux1);
+			\draw[opacity=0.6,colorEPISEN-MEMOIRE!70,shorten <= -10pt]
+			(b) --
+			++(225:2.2) --
+			++(-45:2.2);
+		\end{scope}
+		\draw[colorEPISEN-MEMOIRE!40,line width=8pt,rounded corners=8pt,shorten <= -10pt]
+		(aux4) --
+		++(225:0.8) --
+		++(-45:0.8);
+		\draw[colorEPISEN-MEMOIRE,line width=8pt,rounded corners=8pt,shorten <= -10pt]
+		(aux5) --
+		++(225:0.8) --
+		++(-45:0.8);
+		\draw[colorEPISEN-MEMOIRE,line width=8pt,rounded corners=8pt,shorten <= -10pt]
+		(aux6) --
+		++(225:0.8) --
+		++(-45:0.8);
+		\begin{scope}[colorEPISEN-MEMOIRE!70,line width=6pt,rounded corners=8pt]
+			\draw[shorten <= -10pt, colorEPISEN-MEMOIRE!40]
+			(aux2) --
+			++(225:3) coordinate[pos=0.45] (c) --
+			++(-45:3.1);
+			\draw
+			(aux2) --
+			(c) --
+			++(135:2.5) --
+			++(45:2.5) --
+			++(-45:2.5) coordinate[pos=0.3] (d);   
+			\draw
+			(d) -- +(45:1);
+		\end{scope}
+	\end{tikzpicture}%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Quelques commandes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand*{\doi}[1]{\href{https://doi.org/\detokenize{#1}}{doi: \detokenize{#1}}}
+
+\newcommand{\HRule}{\rule{\linewidth}{3.3mm}}
+\newcommand{\Hrule}{\rule{\linewidth}{0.5mm}}
+
+\newcommand{\cqfd}{$\blacksquare$}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% les box
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newenvironment{tocBox}
+{\begin{mdframed}[skipabove=0pt,
+		skipbelow=0pt,
+		rightline=false,
+		leftline=true,
+		topline=false,
+		bottomline=false,
+		linecolor=colorEPISEN-MEMOIRE,
+		backgroundcolor=linkEpisenMemoireUltraLight,
+		innerleftmargin=5pt,
+		innerrightmargin=5pt,
+		innertopmargin=5pt,
+		innerbottommargin=5pt,
+		leftmargin=0cm,
+		rightmargin=0cm,
+		linewidth=5pt,
+		align=right,
+		userdefinedwidth=\textwidth
+		]}
+	{\end{mdframed}}
+
+
+% Theorem box
+\newmdenv[skipabove=7pt,
+skipbelow=7pt,
+backgroundcolor=black!5,
+linecolor=colorEPISEN-MEMOIRE,
+backgroundcolor=linkEpisenMemoireUltraLight,
+innerleftmargin=5pt,
+innerrightmargin=5pt,
+innertopmargin=5pt,
+leftmargin=0cm,
+rightmargin=0cm,
+innerbottommargin=5pt,
+linewidth=2pt]{tBox}
+
+% Definition box
+\newmdenv[skipabove=7pt,
+skipbelow=7pt,
+rightline=false,
+leftline=true,
+topline=false,
+bottomline=false,
+backgroundcolor=gray!7,
+linecolor=colorEPISEN-MEMOIRE,
+innerleftmargin=5pt,
+innerrightmargin=5pt,
+innertopmargin=0pt,
+leftmargin=0cm,
+rightmargin=0cm,
+linewidth=4pt,
+innerbottommargin=0pt]{dBox}
+
+% proposition box	  
+\newmdenv[skipabove=7pt,
+skipbelow=7pt,
+rightline=false,
+leftline=true,
+topline=true,
+bottomline=false,
+backgroundcolor=gray!25,
+linecolor=colorEPISEN-MEMOIRE,
+innerleftmargin=5pt,
+innerrightmargin=5pt,
+innertopmargin=2pt,
+innerbottommargin=5pt,
+leftmargin=0cm,
+rightmargin=0cm,
+linewidth=2pt]{pBox}
+
+% Lemma box	  
+\newmdenv[skipabove=7pt,
+skipbelow=7pt,
+rightline=false,
+leftline=true,
+topline=false,
+bottomline=false,
+backgroundcolor=gray!15,
+linecolor=colorEPISEN-MEMOIRE,
+innerleftmargin=5pt,
+innerrightmargin=5pt,
+innertopmargin=0pt,
+innerbottommargin=0pt,
+leftmargin=0cm,
+rightmargin=0cm,
+linewidth=4pt]{lBox}
+
+% Proof box
+\newmdenv[skipabove=7pt,
+skipbelow=7pt,
+rightline=false,
+leftline=false,
+topline=false,
+bottomline=false,
+innerleftmargin=5pt,
+innerrightmargin=5pt,
+innertopmargin=0pt,
+leftmargin=0cm,
+rightmargin=0cm,
+linewidth=4pt,
+innerbottommargin=0pt]{proofBox}
+
+
+% Exemple box
+\newmdenv[skipabove=7pt,
+skipbelow=7pt,
+rightline=false,
+leftline=true,
+topline=false,
+bottomline=false,
+linecolor=colorEPISEN-MEMOIRE,
+backgroundcolor=black!5,
+innerleftmargin=5pt,
+innerrightmargin=0pt,
+innertopmargin=0pt,
+leftmargin=0cm,
+rightmargin=0cm,
+linewidth=4pt,
+innerbottommargin=0pt]{exampleBox}
+
+% Code box
+\newmdenv[skipabove=7pt,
+skipbelow=7pt,
+rightline=false,
+leftline=true,
+topline=false,
+bottomline=false,
+linecolor=colorEPISEN-MEMOIRE,
+innerleftmargin=0pt,
+innerrightmargin=0pt,
+innertopmargin=0pt,
+leftmargin=0cm,
+rightmargin=0cm,
+linewidth=4pt,
+innerbottommargin=0pt]{codeBox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% les box pour les théoremes/lemma/exemples/codes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newtheoremstyle{blacknumex}% Theorem style name
+{9pt}% Space above
+{5pt}% Space below
+{\normalfont}% Body font
+{} % Indent amount
+{\bf\sffamily}% Theorem head font
+{\;}% Punctuation after theorem head
+{0.25em}% Space after theorem head
+{{\color{colorEPISEN-MEMOIRE}\thmname{#1}\thmnumber{ #2}}\thmnote{\bfseries\ ---\nobreakspace\textit{#3}}}
+
+\theoremstyle{blacknumex}
+
+%%%%%%%%%% Théoreme
+\newtheorem{theoremeT}{Théorème}[part]
+\newenvironment{theorem}{\begin{tBox}\begin{theoremeT}}{\end{theoremeT}\end{tBox}}
+\renewcommand{\thetheoremeT}{\arabic{theoremeT}}
+
+%%%%%%%%%% Définition
+\newtheorem{definitionT}{Définition}[part]
+\newenvironment{definition}{\begin{dBox}\begin{definitionT}}{\end{definitionT}\end{dBox}}
+\renewcommand{\thedefinitionT}{\arabic{definitionT}}
+
+%%%%%%%%%% Lemma
+\newtheorem{lemmaT}{Lemme}[part]
+\newenvironment{lemma}{\begin{lBox}\begin{lemmaT}}{\end{lemmaT}\end{lBox}}
+\renewcommand{\thelemmaT}{\arabic{lemmaT}}
+
+
+%%%%%%%%%% Proposition
+\newtheorem{propositionT}{Proposition}[part]
+\newenvironment{proposition}{\begin{pBox}\begin{propositionT}}{\end{propositionT}\end{pBox}}
+\renewcommand{\thepropositionT}{\arabic{propositionT}}
+
+%%%%%%%%%% Corolaire
+\newtheorem{corollaryT}{Corolaire}[part]
+\newenvironment{corollary}{\begin{pBox}\begin{corollaryT}}{\end{corollaryT}\end{pBox}}
+\renewcommand{\thecorollaryT}{\arabic{corollaryT}}
+
+\newtheoremstyle{proofStyle}% Theorem style name
+{9pt}% Space above
+{5pt}% Space below
+{\normalfont}% Body font
+{-6pt} % Indent amount
+{\bf\sffamily}% Theorem head font
+{\;}% Punctuation after theorem head
+{0.25em}% Space after theorem head
+{{\color{colorEPISEN-MEMOIRE}\thmname{#1}} {\bfseries\ ---}}
+
+\theoremstyle{proofStyle}
+
+%%%%%%%%%% Proof
+% \def\myhfillEPISEN{
+%   \parfillskip=0pt
+%   \widowpenalty=10000
+%   \displaywidowpenalty=10000
+%   \finalhyphendemerits=0
+%   \unskip\nobreak\null\hfil\penalty50
+%   \hskip2em\null\hfill
+% }
+% \def\qedEPISEN{\myhfillEPISEN{\color{colorEPISEN-MEMOIRE}\cqfd}\par}
+
+\newtheorem{proofT}{Preuve}[part]
+\renewenvironment{proof}
+ {\begin{proofBox}\begin{proofT}}
+ {\hfill{\color{colorEPISEN-MEMOIRE}\cqfd}\end{proofT}\end{proofBox}}
+\renewcommand{\theproofT}{\arabic{proofT}}
+
+\newtheoremstyle{exampleStyle}
+{9pt}% Space above
+{5pt}% Space below
+{\normalfont}% Body font
+{-6pt} % Indent amount
+{\bf\sffamily}% Theorem head font
+{\\}% Punctuation after theorem head
+{0.25em}% Space after theorem head
+{{\color{colorEPISEN-MEMOIRE}\thmname{#1}}}
+
+\theoremstyle{exampleStyle}
+
+\newtheorem*{exampleS}{$\ $ Example}
+\newenvironment{example}{\begin{exampleBox}\begin{exampleS}}{\end{exampleS}\end{exampleBox}}
+
+
+\newtheoremstyle{emptyStyle}
+{9pt}% Space above
+{5pt}% Space below
+{\normalfont}% Body font
+{-6pt} % Indent amount
+{\bf\sffamily}% Theorem head font
+{ }% Punctuation after theorem head
+{0.25em}% Space after theorem head
+{}
+\theoremstyle{emptyStyle}
+
+\newtheorem*{codeS}{}
+\newenvironment{code}{\begin{codeBox}\begin{codeS}}{\end{codeS}\end{codeBox}}
+\newenvironment{codeExample}{\begin{exampleBox}\begin{codeS}}{\end{codeS}\end{exampleBox}}
+
+
+%%% Mettre le glossaire !
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{glossaire.tex}

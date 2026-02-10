@@ -1,0 +1,18 @@
+\noaddvspace 
+\linespread {1}\selectfont 
+\babel@toc {english}{}\relax 
+\contentsline {figure}{\numberline {1}{\ignorespaces Un exemple de tableau dans tout les supports.}}{3}{figure.caption.9}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Un exemple de figure avec dessin (png).}}{3}{figure.caption.10}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3}{\ignorespaces Un test avec pgfplot.}}{10}{figure.caption.14}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Un autre test avec pgfplot.}}{10}{figure.caption.15}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Un graph de mesures avec pgfplot.}}{11}{figure.caption.16}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Un dernier graph avec pgfplot. }}{11}{figure.caption.17}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {7}{\ignorespaces Un exemple de code Java dans une figure.}}{17}{figure.caption.18}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {8}{\ignorespaces Un test de figure}}{20}{figure.caption.20}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Un test de figure}}{20}{figure.caption.21}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsfinish 
